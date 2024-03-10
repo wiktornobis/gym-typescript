@@ -1,11 +1,12 @@
+import Navbar from "@/scenes/navbar";
 
 function App() {
 
   return (
     <>
-      <h1 className="app bg-gray-20">
-        Hello world!
-      </h1>
+      <div className="app bg-gray-20">
+        <Navbar />
+      </div>
     </>
   )
 }
