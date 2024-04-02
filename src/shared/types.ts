@@ -12,7 +12,7 @@ export interface BenefitType {
 }
 
 export interface ClassType {
-    icon: JSX.Element;
-    title: string
-    description?: string;
+    name: string;
+    description?: string
+    image: string;
 }

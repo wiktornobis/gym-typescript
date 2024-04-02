@@ -1,6 +1,13 @@
 import {ClassType, SelectedPage} from "@/shared/types.ts";
 import {motion} from "framer-motion";
 import HText from "@/shared/HText.tsx";
+import image1 from "@/assets/image1.png";
+import image2 from "@/assets/image2.png";
+import image3 from "@/assets/image3.png";
+import image4 from "@/assets/image4.png";
+import image5 from "@/assets/image5.png";
+import image6 from "@/assets/image6.png";
+import Class from "@/scenes/ourclasses/Class.tsx";
 
 const classes: Array<ClassType> = [
     {
@@ -61,10 +68,14 @@ const OurClasses = ({ setSelectedPage }: Props) => {
                 </motion.div>
                 <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
                     <ul className="w-[2800px] whitespace-nowrap">
-                        {OurClasses.map((ite, index) => (
-                            <Class />
+                        {classes.map((item: ClassType, index) => (
+                            <Class
+                                key={`${item.name}-${index}`}
+                                name={item.name}
+                                description={item.description}
+                                image={item.image}
+                            />
                         ))}
-
                     </ul>
                 </div>
             </motion.div>
