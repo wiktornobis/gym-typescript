@@ -1,4 +1,3 @@
-import React from 'react';
 import {SelectedPage} from "@/shared/types.ts";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
