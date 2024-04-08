@@ -38,6 +38,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             <motion.div
                 onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
             >
+                <HText>
+                    <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
+                </HText>
                 {/*HEADER*/}
                 <motion.div
                     className="md:w-3/5"
@@ -110,9 +113,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                             SUBMIT
                         </button>
                     </form>
-                    <HText>
-                        <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
-                    </HText>
+
                 </motion.div>
             </motion.div>
         </section>
