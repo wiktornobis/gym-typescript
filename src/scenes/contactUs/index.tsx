@@ -6,15 +6,26 @@ import {useForm} from "react-hook-form";
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 };
+type FormValues = {
+    name: string;
+    email: string;
+    message: string;
+}
 
 const ContactUs = ({ setSelectedPage }: Props) => {
     const inputStyles = `w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white mt-5`;
-
     const {
         register,
         trigger,
-        formState: { errors }
-    } = useForm();
+        formState: { errors },
+    } = useForm<FormValues>({
+        defaultValues: {
+            name: "",
+            email: "test@wp.pl",
+            message: ""
+        },
+        mode: "onChange"
+    });
     const onSubmit = async(e: any)=> {
         const isValid = await trigger();
         if (!isValid) {
